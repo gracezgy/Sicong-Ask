@@ -1,0 +1,274 @@
+//变量表
+@import './variable.less';
+//清除浏览器默认样式
+@import './reset.less';
+//适配表
+@import './normalize.less';
+
+//页面样式
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+    background-color: @bgColor;
+}
+/*头部栏*/
+header {
+    width: 100%;
+    height: (88rem/75);
+    line-height: (88rem/75);
+    background-color: @headerBg;
+    color: @white;
+    a {
+        position: absolute;
+        left: (20rem/75);
+        top: 0;
+        color: @white;
+        vertical-align: middle;
+    }
+    a i {
+        display: inline-block;
+        width: (20rem/75);
+        height: (31rem/75);
+        background-image: url('../images/back.png');
+        background-size: (20rem/75) (31rem/75);
+        vertical-align: middle;
+
+    }
+    a span {
+        font-size:(28rem/75);
+        vertical-align: middle;
+
+    }
+    h4 {
+        width: 100%;
+        font-size:(36rem/75);
+        text-align: center;
+    }
+    em {
+        position: absolute;
+        right: (28rem/75);
+        top: (40rem/75);
+        display: inline-block;
+        width: (43rem/75);
+        height: (11rem/75);
+        background-image: url("../images/point.png");
+        background-size: (43rem/75) (11rem/75);
+    }
+}
+/* 内容栏 */
+main {
+    /* width: (680rem/75) */;
+    /* width: 100%; */
+    padding-top: (21rem/75);
+    padding-left: (35rem/75);
+    padding-right: (35rem/75);
+    background-color: @bgColor;
+    box-sizing: border-box;
+    /*个人信息*/
+    .info {
+        width: 100%;
+        height: (244rem/75);
+        background-image: url("../images/head_bg.png");
+        background-size: cover;
+        border-radius: 5px;
+        color: @infoFontColor;
+        overflow: hidden;
+    }
+    .top {
+        overflow:hidden;
+    }
+    .pic {
+        float: left;
+        margin-top: (26rem/75);
+        margin-left: (34rem/75);
+    }
+    .pic img {
+        width: (124rem/75);
+        height: (124rem/75);
+    }
+    .name {
+        float: left;
+        margin-top: (34rem/75);
+        margin-left: (26rem/75);
+        font-size: (23.96rem/75);
+    }
+    .name h3 {
+        font-size: (29.95rem/75);
+        margin-bottom: (24rem/75);
+    }
+    .name p {
+        margin-top: (24rem/75);
+    }
+    .edit {
+        float: right;
+        margin-top: (35rem/75);
+
+    }
+    .edit a {
+        display: inline-block;
+        margin-right: (22rem/75);
+        color: @infoFontColor;
+    }
+    .edit a:before {
+        content: " ";
+        margin: 0 auto (20rem/75) ;
+        display: block;
+        width: (36rem/75);
+        height: (36rem/75);
+        background-size: (36rem/75) (36rem/75);
+
+    }
+    .edit .code:before {
+        background-image: url("../images/code.png");
+
+    }
+    .edit .reedit:before {
+        background-image: url("../images/edit.png");
+    }
+    .other{
+        margin-left: (44rem/75);
+        margin-top: (24rem/75);
+    }
+    /*向我提问*/
+    .ask {
+        width: 100%;
+        height: (142rem/75);
+        border: 1px solid #919191;
+        border-radius: 5px;
+        padding-left: (40rem/75);
+        padding-top: (36rem/75);
+        margin-top: (23rem/75);
+        margin-bottom: (23rem/75);
+        box-sizing: border-box;
+        font-size: (24rem/75);
+        color: @baseFontColor;
+        background-color: @white;
+    }
+    .ask p:first-child {
+        padding-bottom: (20rem/75);
+    }
+    /*导航*/
+    .nav {
+        width: 100%;
+        height: (164rem/75);
+        border: 1px solid #919191;
+        border-radius: 5px;
+        background-color: @white;
+    }
+    .nav ul {
+        width: 100%;
+        display: flex;
+    }
+    .nav li {
+        float: left;
+        text-align: center;
+        flex: 1;
+    }
+    .nav li i{
+        display: block;
+        width: (42rem/75);
+        height: (42rem/75);
+        margin-top: (34rem/75);
+        margin-bottom: (20rem/75);
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url("../images/sprite.png");
+        background-size: (250rem/75) (300rem/75);
+    }
+    .nav li:first-child i {
+        background-position: (-47rem/75) (-55rem/75);
+    }
+    .nav li:nth-child(2) i {
+        background-position: (-47rem/75) (-112rem/75);
+    }
+    .nav li:nth-child(3) i {
+        background-position: (-49rem/75) (-159rem/75);
+    }
+    .nav li:nth-child(4) i {
+        background-position: (-49rem/75) (-204rem/75);
+    }
+    /*如何使用*/
+    .use {
+        width: 100%;
+        height: (110rem/75);
+        border: 1px solid #919191;
+        border-radius: 5px;
+        background-color: @white;
+        margin-top: (23rem/75);
+        line-height: (110rem/75);
+        position: relative;
+    }
+    .use .left {
+        position: relative;
+    }
+    .use .left p {
+        padding-left: (96rem/75);
+    }
+    .use .left i {
+        display: block;
+        position: absolute;
+        left: (40rem/75);
+        top: (35rem/75);
+        width: (32rem/75);
+        height: (42rem/75);
+        background-image: url("../images/sprite.png");
+        background-size: (250rem/75) (300rem/75);
+        background-position: (-55rem/75) (-254rem/75);
+    }
+    .use span {
+        display: block;
+        position: absolute;
+        right: (22rem/75);
+        top: (38rem/75);
+        width: (18rem/75);
+        height: (32rem/75);
+        background-image: url("../images/right.png");
+        background-size: (18rem/75) (32rem/75);
+    }
+}
+/*底部*/
+/*导航*/
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: (98rem/75);
+        border-top: 1px solid @footerBorderColor;
+        background-color: @white;
+    }
+    footer ul {
+        width: 100%;
+        display: flex;
+    }
+    footer li {
+        float: left;
+        text-align: center;
+        flex: 1;
+    }
+    footer li i{
+        display: block;
+        width: (30rem/75);
+        height: (30rem/75);
+        margin-top: (16rem/75);
+        margin-bottom: (12rem/75);
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url("../images/sprite.png");
+        background-size: (250rem/75) (300rem/75);
+    }
+    footer li:first-child i {
+        background-position:  (-169rem/75) (0rem/75);
+    }
+    footer li:nth-child(2) i {
+        background-position: (1rem/75) (-102rem/75);
+    }
+    footer li:nth-child(3) i {
+        background-position: (0rem/75) (-190rem/75);
+    }
+    footer li:nth-child(4) i {
+        background-position:  (-132rem/75) (0rem/75);
+    }
